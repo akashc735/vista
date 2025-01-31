@@ -5,10 +5,10 @@ FROM openjdk:17-jdk-alpine
 WORKDIR /app
 
 # Copy the Java source code to the container
-COPY HelloWorld.java .
+COPY helloworld.java .
 
 # Compile the Java program
-RUN javac HelloWorld.java
+RUN javac helloworld.java
 
 # Command to run the application
 CMD ["java", "HelloWorld"]
