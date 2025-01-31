@@ -1,0 +1,9 @@
+# Ignore Java class files
+*.class
+
+# Ignore Docker-related files
+docker-compose.yml
+*.log
+
+# Ignore system-specific files
+*.swp
