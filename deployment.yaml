@@ -1,20 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: HelloWorld-deployment
+  name: helloworld-deployment  # Should be lowercase
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: HelloWorld
+      app: helloworld
   template:
     metadata:
       labels:
-        app: HelloWorld
+        app: helloworld
     spec:
       containers:
-      - name: HelloWorld
-        image: 891612555773.dkr.ecr.ap-south-1.amazonaws.com/javajankinsrepo:latest
-        ports:
-        - containerPort: 8081
+        - name: helloworld-container  # Should be lowercase
+          image: 891612555773.dkr.ecr.ap-south-1.amazonaws.com/javajankinsrepo:latest
+          ports:
+            - containerPort: 8081
+
 
