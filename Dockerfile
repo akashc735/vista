@@ -1,16 +1,7 @@
 # Use the official OpenJDK 17 base image
 FROM openjdk:17-jdk-alpine
-
-# Set the working directory inside the container
 WORKDIR /app
-
-# Copy the Java source code to the container
-COPY helloworld.java .
-
-# Compile the Java program
-RUN javac helloworld.java
-
-# Command to run the application
+COPY HelloWorld.java .
+RUN javac HelloWorld.java
 CMD ["java", "HelloWorld"]
-
 EXPOSE 8081
