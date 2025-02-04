@@ -1,21 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld-deployment  # Should be lowercase
+  name: nginx-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: helloworld
+      app: nginx
   template:
     metadata:
       labels:
-        app: helloworld
+        app: nginx
     spec:
       containers:
-        - name: helloworld-container  # Should be lowercase
-          image: 891612555773.dkr.ecr.ap-south-1.amazonaws.com/javajankinsrepo:latest
-          ports:
-            - containerPort: 8081
-
+      - name: nginx
+        image: 891612555773.dkr.ecr.ap-south-1.amazonaws.com/nginx
+        ports:
+        - containerPort: 80
 
